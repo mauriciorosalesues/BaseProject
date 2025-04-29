@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Vehiculos>
+    <Vehiculo>
+        <Marca>Toyota</Marca>
+        <Modelo>Corolla 2025</Modelo>
+        <Tipo>Sedán</Tipo>
+        <Motor>2.0L 4 cilindros</Motor>
+        <Precio>22000</Precio>
+    </Vehiculo>
+    <Vehiculo>
+        <Marca>Honda</Marca>
+        <Modelo>Civic 2025</Modelo>
+        <Tipo>Sedán</Tipo>
+        <Motor>1.5L Turbo 4 cilindros</Motor>
+        <Precio>23500</Precio>
+    </Vehiculo>
+    <Vehiculo>
+        <Marca>Nissan</Marca>
+        <Modelo>Altima 2025</Modelo>
+        <Tipo>Sedán</Tipo>
+        <Motor>2.5L 4 cilindros</Motor>
+        <Precio>27000</Precio>
+    </Vehiculo>
+    <Vehiculo>
+        <Marca>Kia</Marca>
+        <Modelo>Sportage 2025</Modelo>
+        <Tipo>SUV</Tipo>
+        <Motor>2.5L 4 cilindros</Motor>
+        <Precio>28000</Precio>
+    </Vehiculo>
+    <Vehiculo>
+        <Marca>Toyota</Marca>
+        <Modelo>RAV4 2025</Modelo>
+        <Tipo>SUV</Tipo>
+        <Motor>2.5L híbrido</Motor>
+        <Precio>31000</Precio>
+    </Vehiculo>
+</Vehiculos>
