@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\Frontend\Login\LoginController;
 use App\Http\Controllers\Controles\ControlController;
 use App\Http\Controllers\Backend\Roles\RolesController;
@@ -57,4 +58,18 @@ Route::get('sin-permisos', [ControlController::class,'indexSinPermiso'])->name('
 
 Route::get('/admin/dashboard', [DashboardController::class,'vistaDashboard'])->name('admin.dashboard.index');
 
+// --- TEST XML
 
+Route::get('/xml-to-json', function () {
+    $xmlPath = storage_path('xml/libros.xml');
+    if (!file_exists($xmlPath)) {
+        return response()->json(['error' => 'Archivo XML no encontrado'], 404);
+    }
+
+    $xmlContent = file_get_contents($xmlPath);
+    $xml = simplexml_load_string($xmlContent, "SimpleXMLElement", LIBXML_NOCDATA);
+    $json = json_encode($xml);
+    $array = json_decode($json, true);
+
+    return response()->json($array);
+});
