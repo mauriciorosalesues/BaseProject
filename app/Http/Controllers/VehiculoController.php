@@ -21,6 +21,8 @@ class VehiculoController extends Controller
         $json = json_encode($xml);
 
         // Retorna el JSON del XML a la vista
-        return view('frontend.vehiculos.index', ['vehiculosJson' => $json]);
+        $vehiculosJson = json_encode($xml);
+        return view('frontend.vehiculos.index', ['vehiculosJson' => $vehiculosJson, 'vehiculos' => json_decode($vehiculosJson, true)]);
+
     }
 }
