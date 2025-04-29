@@ -18,11 +18,9 @@ class VehiculoController extends Controller
 
         $xmlContent = file_get_contents($ruta);
         $xml = simplexml_load_string($xmlContent);
-        $json = json_encode($xml);
 
         // Retorna el JSON del XML a la vista
         $vehiculosJson = json_encode($xml);
-        return view('frontend.vehiculos.index', ['vehiculosJson' => $vehiculosJson, 'vehiculos' => json_decode($vehiculosJson, true)]);
-
+        return view('frontend.vehiculos.index', ['vehiculos' => json_decode($vehiculosJson, true)]);
     }
 }
