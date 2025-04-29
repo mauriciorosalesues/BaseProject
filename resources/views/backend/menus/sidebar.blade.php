@@ -40,7 +40,11 @@
                     </ul>
                  </li>
                 @endcan
-
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ route('libros.index') }}">
+                        <i class="bi bi-book"></i> Libros
+                    </a>
+                </li>
 
 
 
