@@ -4,7 +4,6 @@
   <img src="https://laravel.com/img/logomark.min.svg" alt="Laravel" width="60" height="60"/>
   <img src="https://www.php.net/images/logos/new-php-logo.svg" alt="PHP" width="80"/>
   <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="60"/>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/XML_Logo.svg" alt="XML" width="60"/>
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS3" width="60"/>
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5" width="60"/>
 </p>
@@ -13,7 +12,7 @@
 
 ## 📚 Tema
 **Examen Parcial #2**  
-_Materia relacionada con el desarrollo web moderno utilizando Laravel, PHP 8, tecnologías front-end y control de versiones con GitHub._
+_Solución al parcial de la material Desarrollo y Técnicas de Aplicaciones Web,basandose en Almacenamiento Local y Web Services, utilizando Laravel 12, PHP 8, tecnologías front-end y control de versiones con GitHub._
 
 ---
 
@@ -44,5 +43,5 @@ _Materia relacionada con el desarrollo web moderno utilizando Laravel, PHP 8, te
 ---
 
 <p align="center">
-  <strong>¡Gracias por visitar nuestro proyecto! ✨</strong>
+  <strong>Universidad Nacional de El Salvador, Ingenieria en Desarrollo de Software✨</strong>
 </p>
