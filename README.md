@@ -72,14 +72,39 @@ Es importante verificar que el archivo `.env` tenga la siguiente configuración 
 ```env
 DB_DATABASE=laravel
 DB_USERNAME=root
-DB_PASSWORD=root
+DB_PASSWORD= [ingrese la contraseña de su gestor de base de datos]
 ```
+Si se tiene contraseña, agrégala después de DB_PASSWORD= 
+
+---
+🔄 **Paso 6: Llenar la base de datos con usuarios**
+
+Después de migrar las tablas, es necesario llenar la tabla de usuarios con datos de ejemplo. Para ello, se debe ejecutar el siguiente comando para correr los seeders:
+
+
+```bash
+php artisan db:seed
+```
+Esto insertará los usuarios en la tabla `users`, los usuarios creados son:
+
+- **Administrador:**
+  - Usuario: `admin`
+  - Contraseña: `1234`
+
+- **Usuario normal:**
+  - Usuario: `usuario`
+  - Contraseña: `1234`
+
+Una vez realizado este paso, puedes acceder al proyecto desde la web usando los siguientes datos de login:
+
+- **Administrador:** Usuario: `admin`, Contraseña: `1234`
+
+- **Usuario normal:** Usuario: `usuario`, Contraseña: `1234`
 ---
 
 
 ## 👥 Integrantes del Grupo
-
-|            **Nombre**                            | **Carné** |
+|            **Nombre**                            | **Carnet** |
 |--------------------------------------------------|------------|
 | **Hazel Azucena Calderón Bonilla**               | `CB22014`  |
 | **Douglas Isaac Barrera Magaña**                 | `BM22025`  |
