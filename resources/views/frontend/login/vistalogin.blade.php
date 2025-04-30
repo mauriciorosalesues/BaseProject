@@ -134,7 +134,6 @@
         let formData = new FormData();
         formData.append('usuario', usuario);
         formData.append('password', password);
-
         axios.post('/admin/login', formData, {
         })
             .then((response) => {

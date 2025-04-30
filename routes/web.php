@@ -22,7 +22,7 @@ Route::post('/admin/login', [LoginController::class, 'login']);
 Route::post('/admin/logout', [LoginController::class, 'logout'])->name('admin.logout');
 
 // --- LEER ARCHIVO ---
-Route::get('/eventos', [EventoController::class, 'mostrarEventos']);
+Route::get('/eventos', [EventoController::class, 'mostrarEventos'])->name('eventos.preferencias');
 
 // --- CONTROL WEB ---
 

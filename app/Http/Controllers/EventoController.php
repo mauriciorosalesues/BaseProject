@@ -20,7 +20,7 @@ class EventoController extends Controller
 
         // cargar el XML
         $xmlContent = simplexml_load_file($rutaXml);
-        
+
         // convertir a JSON, luego a array
         $json = json_encode($xmlContent);
         $eventos = json_decode($json, true)['evento'];
