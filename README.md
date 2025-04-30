@@ -4,6 +4,7 @@
   <img src="https://laravel.com/img/logomark.min.svg" alt="Laravel" width="60" height="60"/>
   <img src="https://www.php.net/images/logos/new-php-logo.svg" alt="PHP" width="80"/>
   <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="60"/>
+  <img src="https://img.icons8.com/color/96/xml.png" width="60" height="60"/>  
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS3" width="60"/>
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5" width="60"/>
 </p>
