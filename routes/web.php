@@ -8,7 +8,7 @@ use App\Http\Controllers\Backend\Roles\PermisoController;
 use App\Http\Controllers\Backend\Perfil\PerfilController;
 use App\Http\Controllers\Backend\Configuracion\ConfiguracionController;
 use App\Http\Controllers\Backend\Registro\RegistroController;
-
+use App\Http\Controllers\EventoController; //Ruta para leer el archivo y los devuelva como JSON
 
 
 use App\Http\Controllers\Backend\Dashboard\DashboardController;
@@ -20,6 +20,9 @@ Route::get('/', [LoginController::class,'index'])->name('login');
 
 Route::post('/admin/login', [LoginController::class, 'login']);
 Route::post('/admin/logout', [LoginController::class, 'logout'])->name('admin.logout');
+
+// --- LEER ARCHIVO ---
+Route::get('/eventos', [EventoController::class, 'mostrarEventos']);
 
 // --- CONTROL WEB ---
 
