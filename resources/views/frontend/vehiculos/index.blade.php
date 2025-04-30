@@ -7,14 +7,17 @@
     
     <!-- Bootstrap CSS (asumiendo instalación via CDN) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animate desde CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body class="bg-light">
     <div class="container py-5">
         <!-- Título -->
-        <h1 class="mb-4 text-center">Catálogo de Vehículos 2025</h1>
+        <h1 class="text-center text-dark mb-4 animate__animated animate__fadeInDown">🚗 Catálogo de Vehículos 2025</h1>
         
         <!-- Tabla Responsive -->
-        <div class="table-responsive">
+        <div class="table-responsive animate__animated animate__fadeInUp animate__delay-1s">
             <table class="table table-striped table-hover">
                 <thead class="table-dark">
                     <tr>
