@@ -9,7 +9,7 @@ use App\Http\Controllers\Backend\Perfil\PerfilController;
 use App\Http\Controllers\Backend\Configuracion\ConfiguracionController;
 use App\Http\Controllers\Backend\Registro\RegistroController;
 use App\Http\Controllers\SoapController;
-use App\Http\Controllers\CalculatorController;
+
 
 
 use App\Http\Controllers\Backend\Dashboard\DashboardController;
