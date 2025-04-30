@@ -9,7 +9,7 @@ use App\Http\Controllers\Backend\Perfil\PerfilController;
 use App\Http\Controllers\Backend\Configuracion\ConfiguracionController;
 use App\Http\Controllers\Backend\Registro\RegistroController;
 use App\Http\Controllers\VehiculoController;
-
+use App\Http\Controllers\SoapController;
 
 use App\Http\Controllers\Backend\Dashboard\DashboardController;
 
@@ -59,3 +59,7 @@ Route::get('/admin/dashboard', [DashboardController::class,'vistaDashboard'])->n
 
 // Vehiculos
 Route::get('/xml-vehiculos', [VehiculoController::class, 'mostrarXMLVehiculos']);
+
+//  SOAP
+Route::get('/soap', [SoapController::class, 'showForm']);
+Route::post('/soap', [SoapController::class, 'processForm']);
