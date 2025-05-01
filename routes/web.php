@@ -8,6 +8,7 @@ use App\Http\Controllers\Backend\Roles\PermisoController;
 use App\Http\Controllers\Backend\Perfil\PerfilController;
 use App\Http\Controllers\Backend\Configuracion\ConfiguracionController;
 use App\Http\Controllers\Backend\Registro\RegistroController;
+use App\Http\Controllers\XmlController;
 use App\Http\Controllers\SoapController;
 
 
@@ -58,21 +59,7 @@ Route::get('sin-permisos', [ControlController::class,'indexSinPermiso'])->name('
 
 Route::get('/admin/dashboard', [DashboardController::class,'vistaDashboard'])->name('admin.dashboard.index');
 
-Route::get('/storage/xml', function()
-{
-    // Lee el archivo xml y lo guarda en xmldatos
-    $xmldatos = file_get_contents(storage_path('xml/listado.xml'));
-
-    // mediante simplexml_load_string se guardan los datos de xmldatos en un objeto
-    $xmlobjeto = simplexml_load_string($xmldatos);
-
-    // se convierte el objeto xml y devuelve un json
-    $json = json_encode($xmlobjeto);
-
-    // muestra el contenido en formato json
-    return response($json, 200)
-        ->header('Content-Type', 'application/json');
-});
+Route::get('/xml-view', [XmlController::class, 'showXmlTable']);
 
 
 // Ruta para mostrar el formulario
