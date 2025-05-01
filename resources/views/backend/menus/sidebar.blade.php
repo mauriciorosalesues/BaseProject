@@ -36,13 +36,18 @@
                                 <p>Usuario</p>
                             </a>
                         </li>
-
                     </ul>
+
+                    
                  </li>
                 @endcan
 
-
-
+                <li class="nav-item">
+                    <a href="{{ route('calculator.request') }}" target="frameprincipal" class="nav-link">
+                        <i class="fas fa-calculator"> </i>
+                        <p style="margin-left: 5px"> Calculadora</p>
+                    </a>
+                </li>
 
             </ul>
         </nav>

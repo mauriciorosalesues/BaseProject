@@ -59,7 +59,6 @@ Route::get('sin-permisos', [ControlController::class,'indexSinPermiso'])->name('
 Route::get('/admin/dashboard', [DashboardController::class,'vistaDashboard'])->name('admin.dashboard.index');
 
 // Implementacion SOAP
-Route::get('/solicitar', [SOAPController::class, 'capturarSolicitud']);
-Route::post('/procesar', [SOAPController::class, 'procesarSolicitud']);
-
+Route::get('/request', [SOAPController::class, 'capturarSolicitud'])->name('calculator.request');
+Route::post('/calcular', [SOAPController::class, 'procesarSolicitud'])->name('calculator.result');
 
