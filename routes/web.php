@@ -60,5 +60,4 @@ Route::get('/admin/dashboard', [DashboardController::class,'vistaDashboard'])->n
 
 // Implementacion SOAP
 Route::get('/request', [SOAPController::class, 'capturarSolicitud'])->name('calculator.request');
-Route::post('/calcular', [SOAPController::class, 'procesarSolicitud'])->name('calculator.result');
-
+Route::post('/result', [SOAPController::class, 'procesarSolicitud'])->name('calculator.result');

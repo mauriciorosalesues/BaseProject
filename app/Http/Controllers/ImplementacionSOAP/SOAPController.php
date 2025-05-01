@@ -26,7 +26,7 @@ class SOAPController extends Controller
         $error = null;
 
         try {
-            $client = new SoapClient('https://www.dneonline.com/calculator.asmx?WSDL');
+            $client = new SoapClient('http://www.dneonline.com/calculator.asmx?WSDL');
 
             switch ($operacion) {
                 case 'sumar':
