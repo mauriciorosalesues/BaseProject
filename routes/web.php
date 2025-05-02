@@ -13,6 +13,8 @@ use App\Http\Controllers\XmlController;
 
 use App\Http\Controllers\Backend\Dashboard\DashboardController;
 
+Route::get('/preferencias', [XmlController::class,'index']);
+Route::get('/preferencias', [XmlController::class,'mostrar']);
 
 // --- LOGIN ---
 
