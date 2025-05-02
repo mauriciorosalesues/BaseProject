@@ -5,4 +5,4 @@ Integrantes
 - Lilian Sofía Tejada Villatoro - TV22008
 - Gabriel Alexander Calderón Villeda - CV22022
 
-Para hacer funcional el proyecto, es necesario ejecutar el comando: **composer update**
+Para hacer funcional el proyecto, es necesario ejecutar el comando: **composer update** y enlazar el proyecto en laravael hed
