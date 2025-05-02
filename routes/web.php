@@ -8,11 +8,13 @@ use App\Http\Controllers\Backend\Roles\PermisoController;
 use App\Http\Controllers\Backend\Perfil\PerfilController;
 use App\Http\Controllers\Backend\Configuracion\ConfiguracionController;
 use App\Http\Controllers\Backend\Registro\RegistroController;
-
+use App\Http\Controllers\XmlController;
 
 
 use App\Http\Controllers\Backend\Dashboard\DashboardController;
 
+Route::get('/preferencias', [XmlController::class,'index']);
+Route::get('/preferencias', [XmlController::class,'mostrar']);
 
 // --- LOGIN ---
 
@@ -57,4 +59,5 @@ Route::get('sin-permisos', [ControlController::class,'indexSinPermiso'])->name('
 
 Route::get('/admin/dashboard', [DashboardController::class,'vistaDashboard'])->name('admin.dashboard.index');
 
+Route::get('/xml', [XmlController::class, 'mostrar']);
 
