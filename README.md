@@ -5,4 +5,5 @@ Integrantes
 - Lilian Sofía Tejada Villatoro - TV22008
 - Gabriel Alexander Calderón Villeda - CV22022
 
-Para hacer funcional el proyecto, es necesario ejecutar el comando: **composer update** y enlazar el proyecto en laravael hed
+
+Para que el proyecto funcione, primero ejecuta composer update para instalar las dependencias, y luego enlázalo en Laravel Herd para poder accederlo desde el navegador.
