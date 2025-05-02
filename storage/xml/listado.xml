@@ -1,0 +1,32 @@
+<lista>
+    <clientes>
+        <id>1</id>
+        <nombre>Pedro</nombre>
+        <cliente>Frecuente</cliente>
+    </clientes>
+    <clientes>
+        <id>2</id>
+        <nombre>Rodrigo</nombre>
+        <cliente>Frecuente</cliente>
+    </clientes>
+    <clientes>
+        <id>3</id>
+        <nombre>Rodrigo</nombre>
+        <cliente>Frecuente</cliente>
+    </clientes>
+    <clientes>
+        <id>4</id>
+        <nombre>Pedro</nombre>
+        <cliente>Frecuente</cliente>
+    </clientes>
+    <clientes>
+        <id>5</id>
+        <nombre>Pedro</nombre>
+        <cliente>Frecuente</cliente>
+    </clientes>
+    <clientes>
+        <id>6</id>
+        <nombre>Pedro</nombre>
+        <cliente>Frecuente</cliente>
+    </clientes>
+</lista>
