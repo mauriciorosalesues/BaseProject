@@ -1,0 +1,72 @@
+<Libros>
+    <Libro>
+        <ID>1</ID>
+        <Titulo>Cien años de soledad</Titulo>
+        <Autor>Gabriel García Márquez</Autor>
+        <Anio>1967</Anio>
+        <Genero>Saga familiar</Genero>
+    </Libro>
+    <Libro>
+        <ID>2</ID>
+        <Titulo>El amor en los tiempos del cólera</Titulo>
+        <Autor>Gabriel García Márquez</Autor>
+        <Anio>1985</Anio>
+        <Genero>Realismo mágico</Genero>
+    </Libro>
+    <Libro>
+        <ID>3</ID>
+        <Titulo>Fervor de Buenos Aires</Titulo>
+        <Autor>Jorge Luis Borges</Autor>
+        <Anio>1923</Anio>
+        <Genero>Poesía</Genero>
+    </Libro>
+    <Libro>
+        <ID>4</ID>
+        <Titulo>Don Segundo Sombra</Titulo>
+        <Autor>Ricardo Güiraldes</Autor>
+        <Anio>1926</Anio>
+        <Genero>Novela</Genero>
+    </Libro>
+    <Libro>
+        <ID>5</ID>
+        <Titulo>Pedro Páramo</Titulo>
+        <Autor>Juan Rulfo</Autor>
+        <Anio>1955</Anio>
+        <Genero>Novela</Genero>
+    </Libro>
+    <Libro>
+        <ID>6</ID>
+        <Titulo>El Principito</Titulo>
+        <Autor>Antoine de Saint-Exupéry</Autor>
+        <Anio>1943</Anio>
+        <Genero>Fábula</Genero>
+    </Libro>
+    <Libro>
+        <ID>7</ID>
+        <Titulo>Don Quijote de la Mancha</Titulo>
+        <Autor>Miguel de Cervantes</Autor>
+        <Anio>1605</Anio>
+        <Genero>Sátira</Genero>
+    </Libro>
+    <Libro>
+        <ID>8</ID>
+        <Titulo>El viejo y el mar</Titulo>
+        <Autor>Ernest Hemingway</Autor>
+        <Anio>1952</Anio>
+        <Genero>Historia de mar</Genero>
+    </Libro>
+    <Libro>
+        <ID>9</ID>
+        <Titulo>En el camino</Titulo>
+        <Autor>Jack Kerouac</Autor>
+        <Anio>1957</Anio>
+        <Genero>Novela autobiográfica</Genero>
+    </Libro>
+    <Libro>
+        <ID>10</ID>
+        <Titulo>Rayuela</Titulo>
+        <Autor>Julio Cortázar</Autor>
+        <Anio>1963</Anio>
+        <Genero>Ficción</Genero>
+    </Libro>
+</Libros>
