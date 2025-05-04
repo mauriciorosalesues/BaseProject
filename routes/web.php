@@ -9,10 +9,9 @@ use App\Http\Controllers\Backend\Perfil\PerfilController;
 use App\Http\Controllers\Backend\Configuracion\ConfiguracionController;
 use App\Http\Controllers\Backend\Registro\RegistroController;
 
-
-
 use App\Http\Controllers\Backend\Dashboard\DashboardController;
 
+use App\Http\Controllers\LibroController;
 
 // --- LOGIN ---
 
@@ -56,5 +55,8 @@ Route::post('/admin/editar-perfil/actualizar', [PerfilController::class, 'editar
 Route::get('sin-permisos', [ControlController::class,'indexSinPermiso'])->name('no.permisos.index');
 
 Route::get('/admin/dashboard', [DashboardController::class,'vistaDashboard'])->name('admin.dashboard.index');
+
+// --- LIBROS ---
+Route::get('/libros', [LibroController::class, 'mostrarLibros'])->name('libros.vista_libros');
 
 
