@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Empleados>
+    <Empleado>
+        <ID>1</ID>
+        <Nombres>Carlos Antonio</Nombres>
+        <Apellidos>Martínez López</Apellidos>
+        <Direccion>San Salvador, Col. Escalón</Direccion>
+        <DUI>01234567-9</DUI>
+        <Telefono>78451236</Telefono>
+        <Cargo>Gerente de Ventas</Cargo>
+    </Empleado>
+    <Empleado>
+        <ID>2</ID>
+        <Nombres>Ana Beatriz</Nombres>
+        <Apellidos>Torres Rodríguez</Apellidos>
+        <Direccion>Santa Ana, Res. El Trebol</Direccion>
+        <DUI>23456789-0</DUI>
+        <Telefono>72938456</Telefono>
+        <Cargo>Auxiliar Contable</Cargo>
+    </Empleado>
+    <Empleado>
+        <ID>3</ID>
+        <Nombres>Luis Fernando</Nombres>
+        <Apellidos>Ramírez Castillo</Apellidos>
+        <Direccion>Soyapango, Calle Central</Direccion>
+        <DUI>34567890-1</DUI>
+        <Telefono>78901234</Telefono>
+        <Cargo>Desarrollador Web</Cargo>
+    </Empleado>
+    <Empleado>
+        <ID>4</ID>
+        <Nombres>María Cristina</Nombres>
+        <Apellidos>Gómez Hernández</Apellidos>
+        <Direccion>Mejicanos, Av. Libertad</Direccion>
+        <DUI>45678901-2</DUI>
+        <Telefono>70034567</Telefono>
+        <Cargo>Analista Financiera</Cargo>
+    </Empleado>
+    <Empleado>
+        <ID>5</ID>
+        <Nombres>José Alberto</Nombres>
+        <Apellidos>Rivera Mejía</Apellidos>
+        <Direccion>Apopa, Reparto Las Delicias</Direccion>
+        <DUI>56789012-3</DUI>
+        <Telefono>75231478</Telefono>
+        <Cargo>Técnico de Soporte</Cargo>
+    </Empleado>
+    <Empleado>
+        <ID>6</ID>
+        <Nombres>Karla Patricia</Nombres>
+        <Apellidos>Salazar Aquino</Apellidos>
+        <Direccion>Ilopango, Comunidad San José</Direccion>
+        <DUI>67890123-4</DUI>
+        <Telefono>71025638</Telefono>
+        <Cargo>Coordinadora de Logística</Cargo>
+    </Empleado>
+    <Empleado>
+        <ID>7</ID>
+        <Nombres>Edwin Mauricio</Nombres>
+        <Apellidos>Pérez Sánchez</Apellidos>
+        <Direccion>Santa Tecla, Col. San Rafael</Direccion>
+        <DUI>78901234-5</DUI>
+        <Telefono>76890123</Telefono>
+        <Cargo>Ingeniero de Sistemas</Cargo>
+    </Empleado>
+    <Empleado>
+        <ID>8</ID>
+        <Nombres>Gabriela Sofía</Nombres>
+        <Apellidos>Rivas Menéndez</Apellidos>
+        <Direccion>La Libertad, Calle El Progreso</Direccion>
+        <DUI>89012345-6</DUI>
+        <Telefono>70123456</Telefono>
+        <Cargo>Jefa de Recursos Humanos</Cargo>
+    </Empleado>
+    <Empleado>
+        <ID>9</ID>
+        <Nombres>David Alejandro</Nombres>
+        <Apellidos>Lara Pineda</Apellidos>
+        <Direccion>Sonsonate, Barrio El Centro</Direccion>
+        <DUI>90123456-7</DUI>
+        <Telefono>75609823</Telefono>
+        <Cargo>Asistente Administrativo</Cargo>
+    </Empleado>
+    <Empleado>
+        <ID>10</ID>
+        <Nombres>Andrea Carolina</Nombres>
+        <Apellidos>Morales Pérez</Apellidos>
+        <Direccion>Ahuachapán, Res. Bella Vista</Direccion>
+        <DUI>12345098-1</DUI>
+        <Telefono>72340987</Telefono>
+        <Cargo>Gerente de Proyectos</Cargo>
+    </Empleado>
+    <Empleado>
+        <ID>11</ID>
+        <Nombres>Miguel Ángel</Nombres>
+        <Apellidos>Alfaro Cruz</Apellidos>
+        <Direccion>Chalatenango, Calle Libertad</Direccion>
+        <DUI>11223344-5</DUI>
+        <Telefono>78901245</Telefono>
+        <Cargo>Técnico Eléctrico</Cargo>
+    </Empleado>
+    <Empleado>
+        <ID>12</ID>
+        <Nombres>Estefany Julissa</Nombres>
+        <Apellidos>Orellana Martínez</Apellidos>
+        <Direccion>Cojutepeque, Zona 3</Direccion>
+        <DUI>33445566-7</DUI>
+        <Telefono>70091234</Telefono>
+        <Cargo>Secretaria Ejecutiva</Cargo>
+    </Empleado>
+    <Empleado>
+        <ID>13</ID>
+        <Nombres>Jonathan Ernesto</Nombres>
+        <Apellidos>Campos Durán</Apellidos>
+        <Direccion>Usulután, Calle 5 de Noviembre</Direccion>
+        <DUI>55667788-9</DUI>
+        <Telefono>72134567</Telefono>
+        <Cargo>Diseñador Gráfico</Cargo>
+    </Empleado>
+    <Empleado>
+        <ID>14</ID>
+        <Nombres>Paola Margarita</Nombres>
+        <Apellidos>Pérez Barrera</Apellidos>
+        <Direccion>San Miguel, Final Calle Ancha</Direccion>
+        <DUI>66778899-0</DUI>
+        <Telefono>79800123</Telefono>
+        <Cargo>Supervisora de Ventas</Cargo>
+    </Empleado>
+    <Empleado>
+        <ID>15</ID>
+        <Nombres>Rodrigo Armando</Nombres>
+        <Apellidos>Molina Vásquez</Apellidos>
+        <Direccion>Zacatecoluca, Col. Las Flores</Direccion>
+        <DUI>77889900-1</DUI>
+        <Telefono>71237890</Telefono>
+        <Cargo>Auditor Interno</Cargo>
+    </Empleado>
+</Empleados>

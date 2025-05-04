@@ -37,6 +37,7 @@ class XMLToJsonController extends Controller
 
     public function convertXMLToJson()
     {
+        dd(Storage::disk()->allFiles());
         return view(
             'frontend.xml.showXmlAndJsonFormat',
             [

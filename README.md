@@ -2,11 +2,11 @@
 
 ## Integrantes
 Los integrantes del equipo son:
-    - Ángel Guevara, José Franklin - AG19030
-    - Lara Guerra, Alfredo Alexander
-    - Navarro Aguilar, Cristian Armando
-    - Alas Hernandez, Milton Obed
-    - Martínez Flores, Josué Edenilson
+    + Ángel Guevara, José Franklin - AG19030
+    + Lara Guerra, Alfredo Alexander
+    + Navarro Aguilar, Cristian Armando
+    + Alas Hernandez, Milton Obed
+    + Martínez Flores, Josué Edenilson - MF22036
 
 ## Consideraciones de Lectura de XML y conversión a Json
 
