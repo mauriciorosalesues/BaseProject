@@ -8,7 +8,7 @@ use App\Http\Controllers\Backend\Roles\PermisoController;
 use App\Http\Controllers\Backend\Perfil\PerfilController;
 use App\Http\Controllers\Backend\Configuracion\ConfiguracionController;
 use App\Http\Controllers\Backend\Registro\RegistroController;
-
+use App\Http\Controllers\Backend\XMLToJsonController;
 
 
 use App\Http\Controllers\Backend\Dashboard\DashboardController;
@@ -58,3 +58,6 @@ Route::get('sin-permisos', [ControlController::class,'indexSinPermiso'])->name('
 Route::get('/admin/dashboard', [DashboardController::class,'vistaDashboard'])->name('admin.dashboard.index');
 
 
+// --- CONVERSION XML A JSON ---
+Route::get('/admin/convertir-xml-a-json', [XMLToJsonController::class,'convertXMLToJson'])->name('admin.convertir-xml-a-json');
+Route::get('/admin/mostrar-json', [XMLToJsonController::class,'showJson'])->name('admin.mostrar-json');
