@@ -15,6 +15,12 @@
                         <p>Libros</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('libros.vista_libros') }}" target="frameprincipal" class="nav-link">
+                        <i class="fas fa-book nav-icon" style="color: #4CAF50;"></i>
+                        <p>Conversor</p>
+                    </a>
+                </li>
 
                 <!-- ROLES Y PERMISO -->
                 @can('sidebar.roles.y.permisos')
