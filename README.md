@@ -81,19 +81,3 @@ Accede a tu proyecto en:
 ```
 http://127.0.0.1:8000
 ```
-
----
-
-## 📌 Notas adicionales
-
-- Asegúrate de tener instaladas las extensiones necesarias de PHP, como `gd`, `mbstring`, `pdo`, entre otras.
-- Si es necesario, revisa el archivo `php.ini` para habilitar las extensiones requeridas.
-- Para ejecutar correctamente el proyecto es recomendable usar **PHP 8.1 o superior**.
-
----
-
-## 📷 Vista previa
-
-> En la aplicación podrás visualizar las tarjetas de los integrantes del equipo con su respectivo nombre y carnet desde la opción **Info** en el panel de navegación.
-
----
