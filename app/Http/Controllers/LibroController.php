@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Http\Controllers;
 
@@ -9,14 +9,14 @@ class LibroController extends Controller
 {
    public function mostrarLibros()
    {
-        $rutaArchivoXml = storage_path('/xml/libros.xml');
+      $rutaArchivoXml = storage_path('/xml/libros.xml');
 
-        $contenidoXml = file_get_contents($rutaArchivoXml);
+      $contenidoXml = file_get_contents($rutaArchivoXml);
 
-        $xmlParseado = simplexml_load_string($contenidoXml);
+      $xmlParseado = simplexml_load_string($contenidoXml);
 
-        $librosEnFormatoJson = json_encode($xmlParseado);  
-        
-        return view('vista_libros', ['librosEnFormatoJson' => $librosEnFormatoJson]);
+      $librosEnFormatoJson = json_encode($xmlParseado);
+
+      return view('frontend.libros.vista_libros', ['librosEnFormatoJson' => $librosEnFormatoJson]);
    }
 }
