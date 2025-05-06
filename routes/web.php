@@ -10,7 +10,7 @@ use App\Http\Controllers\Backend\Configuracion\ConfiguracionController;
 use App\Http\Controllers\Backend\Registro\RegistroController;
 
 use App\Http\Controllers\Backend\Dashboard\DashboardController;
-
+use App\Http\Controllers\Controles\NumberConversionController; // Ruta modificada  
 use App\Http\Controllers\LibroController;
 
 // --- LOGIN ---
@@ -60,3 +60,6 @@ Route::get('/admin/dashboard', [DashboardController::class,'vistaDashboard'])->n
 Route::get('/libros', [LibroController::class, 'mostrarLibros'])->name('libros.vista_libros');
 
 
+// Ruta para el conversor numérico
+Route::get('/number-converter', [NumberConversionController::class, 'index'])->name('number.converter');
+Route::post('/number-convert', [NumberConversionController::class, 'convert'])->name('number.convert');  

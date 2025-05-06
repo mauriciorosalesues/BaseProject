@@ -159,6 +159,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Artisaninweb\SoapWrapper\ServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -182,7 +183,8 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
+        'SoapWrapper' => Artisaninweb\SoapWrapper\Facade::class,
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
-];
+];   
