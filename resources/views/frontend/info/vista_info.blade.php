@@ -50,7 +50,7 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">José Arnoldo Landaverde Gómez</h5>
-                    <p class="card-text">Carnet: </p>
+                    <p class="card-text">Carnet: LG22018</p>
                 </div>
             </div>
         </div>
