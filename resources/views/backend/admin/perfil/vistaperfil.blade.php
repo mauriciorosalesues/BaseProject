@@ -6,19 +6,20 @@
     <link href="{{ asset('css/toastr.min.css') }}" type="text/css" rel="stylesheet" />
 @stop
 
-<section class="content-header">
-    <div class="container-fluid">
-        <div class="col-sm-12">
-            <h1>Perfil de Usuario</h1>
-        </div>
+<section class="content">
 
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-6" style="max-width: 80%;">
+                <section class="content-header">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-sm-12">
+                <h1>Perfil de Usuario</h1>
+            </div>
+        </div>
     </div>
 </section>
-
-<section class="content">
-    <div class="container-fluid" style="margin-left: 15px">
-        <div class="row">
-            <div class="col-md-6">
                 <div class="card card-gray-dark">
                     <div class="card-header">
                         <h3 class="card-title">Formulario</h3>
@@ -48,9 +49,7 @@
                         </div>
                     </form>
                 </div>
-
             </div>
-
         </div>
     </div>
 </section>

@@ -26,7 +26,7 @@
         }
         body {
             font-family: 'Roboto', sans-serif;
-            background-image: url({{ asset('images/fondo3.jpg') }});
+            background-image: url({{ asset('images/ues_fondo.png') }});
         }
 
         .demo-container {
@@ -75,17 +75,17 @@
 
                         <div class="p-5 bg-white rounded shadow-lg">
                             <div class="text-center image-size-small position-relative">
-                                <img src="{{ asset('images/logo.png') }}" class=" p-2">
+                                <img src="{{ asset('images/ues_logo.png') }}" class=" p-2">
                             </div>
                             <h3 class="mb-2 text-center pt-5"><strong>&nbsp;</strong></h3>
-                            <p class="text-center lead" style="font-weight: bold">BASE</p>
+                            <p class="text-center lead" style="font-weight: bold">Examen Parcial 2</p>
                             <form>
                                 <label style="margin-top: 10px" class="font-500">Usuario</label>
                                 <input class="form-control form-control-lg mb-3" id="usuario" autocomplete="off" type="text">
                                 <label class="font-500">Contraseña</label>
                                 <input class="form-control form-control-lg" id="password" type="password">
 
-                                <input type="button" value="ACCEDER" style="margin-top: 25px; width: 100%; font-weight: bold" onclick="login()" class="button button-uppercase button-primary button-pill">
+                                <input type="button" value="ACCEDER" style="margin-top: 25px; width: 100%; font-weight: bold" onclick="login()" class="button button-uppercase button-primary">
                             </form>
                         </div>
                     </div>

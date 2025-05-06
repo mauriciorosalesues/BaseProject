@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\InfoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\Login\LoginController;
 use App\Http\Controllers\Controles\ControlController;
@@ -9,10 +10,9 @@ use App\Http\Controllers\Backend\Perfil\PerfilController;
 use App\Http\Controllers\Backend\Configuracion\ConfiguracionController;
 use App\Http\Controllers\Backend\Registro\RegistroController;
 
-
-
 use App\Http\Controllers\Backend\Dashboard\DashboardController;
-
+use App\Http\Controllers\Controles\NumberConversionController; // Ruta modificada  
+use App\Http\Controllers\LibroController;
 
 // --- LOGIN ---
 
@@ -57,4 +57,12 @@ Route::get('sin-permisos', [ControlController::class,'indexSinPermiso'])->name('
 
 Route::get('/admin/dashboard', [DashboardController::class,'vistaDashboard'])->name('admin.dashboard.index');
 
+// --- LIBROS ---
+Route::get('/libros', [LibroController::class, 'mostrarLibros'])->name('libros.vista_libros');
 
+// --- INFO ---
+Route::get('/info', [InfoController::class, 'index'])->name('info.vista_info');
+
+// Ruta para el conversor numérico
+Route::get('/number-converter', [NumberConversionController::class, 'index'])->name('number.converter');
+Route::post('/number-convert', [NumberConversionController::class, 'convert'])->name('number.convert');  

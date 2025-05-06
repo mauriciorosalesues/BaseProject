@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Artisaninweb\SoapWrapper\SoapWrapper;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -11,7 +12,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->bind('soapWrapper', function ($app) {
+            return new SoapWrapper();
+        });
     }
 
     /**
@@ -21,4 +24,4 @@ class AppServiceProvider extends ServiceProvider
     {
         //
     }
-}
+}  
