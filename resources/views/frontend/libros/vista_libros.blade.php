@@ -8,12 +8,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .card:hover {
-            transform: translateY(-5px);
-            transition: transform 0.3s ease;
+            cursor: pointer;
         }
 
         .genre-badge {
             font-size: 0.8rem;
+        }
+
+        .float {
+            transition: .5s, color .10s;
+            -webkit-transition: .5s, color .10s;
+            -moz-transition: .5s, color .10s;
+        }
+
+        .float:hover {
+            box-shadow: 0 8px 8px 0 #000000, 0 8px 8px 0 #000000;
+            transform: translate(0px, 5px);
+            -webkit-transform: translate(0px, 5px);
+            -moz-transform: translate(0px, 5px);
         }
     </style>
 </head>
@@ -30,7 +42,7 @@
             @if(isset($libros['Libro']) && count($libros['Libro']) > 0)
                 @foreach($libros['Libro'] as $libro)
                     <div class="col">
-                        <div class="card h-100 shadow-sm">
+                        <div class="card float h-100 shadow-sm">
                             <div class="card-header bg-primary text-white">
                                 <h2 class="h5 mb-0">{{ $libro['Titulo'] ?? 'Título no disponible' }}</h2>
                             </div>

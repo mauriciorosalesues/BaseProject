@@ -11,14 +11,21 @@
                 
                 <li class="nav-item">
                     <a href="{{ route('libros.vista_libros') }}" target="frameprincipal" class="nav-link">
-                        <i class="fas fa-book nav-icon" style="color: #4CAF50;"></i>
+                        <i class="fas fa-book nav-icon" style="color: #fff;"></i>
                         <p>Libros</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('libros.vista_libros') }}" target="frameprincipal" class="nav-link">
-                        <i class="fas fa-book nav-icon" style="color: #4CAF50;"></i>
+                        <i class="fas fa-book nav-icon" style="color: #fff;"></i>
                         <p>Conversor</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('info.vista_info') }}" target="frameprincipal" class="nav-link">
+                        <i class="fas fa-info nav-icon" style="color: #fff;"></i>
+                        <p>Info</p>
                     </a>
                 </li>
 

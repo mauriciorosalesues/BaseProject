@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\InfoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\Login\LoginController;
 use App\Http\Controllers\Controles\ControlController;
@@ -59,6 +60,8 @@ Route::get('/admin/dashboard', [DashboardController::class,'vistaDashboard'])->n
 // --- LIBROS ---
 Route::get('/libros', [LibroController::class, 'mostrarLibros'])->name('libros.vista_libros');
 
+// --- INFO ---
+Route::get('/info', [InfoController::class, 'index'])->name('info.vista_info');
 
 // Ruta para el conversor numérico
 Route::get('/number-converter', [NumberConversionController::class, 'index'])->name('number.converter');
