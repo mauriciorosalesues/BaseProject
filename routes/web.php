@@ -12,7 +12,7 @@ use App\Http\Controllers\Backend\Registro\RegistroController;
 
 
 use App\Http\Controllers\Backend\Dashboard\DashboardController;
-
+use App\Http\Controllers\Backend\Events\EventController;
 
 // --- LOGIN ---
 
@@ -58,3 +58,6 @@ Route::get('sin-permisos', [ControlController::class,'indexSinPermiso'])->name('
 Route::get('/admin/dashboard', [DashboardController::class,'vistaDashboard'])->name('admin.dashboard.index');
 
 
+
+//--- EVENTOS ---
+Route::get ('/admin/eventos/index', [EventController::class,'index'])->name('admin.eventos.index');
