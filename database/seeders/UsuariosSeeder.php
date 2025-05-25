@@ -22,7 +22,7 @@ class UsuariosSeeder extends Seeder
         
         Usuario::create([
             'nombre' => 'Usuario',
-            'usuario' => 'usuario',
+            'usuario' => 'user',
             'password' => bcrypt('1234'),
             'activo' => 1,
         ])->assignRole('usuario');
