@@ -23,7 +23,7 @@
  <body class="sidebar-mini sidebar-closed sidebar-collapse" style="height: auto;">
  -->
 
-<body class="hold-transition sidebar-mini">
+
 <div class="wrapper">
     @include("backend.menus.navbar")
     @include("backend.menus.sidebar")

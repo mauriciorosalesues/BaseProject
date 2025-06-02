@@ -66,6 +66,9 @@
 </head>
 
 <body>
+<div>
+  
+</div>
 <div class="container">
     <div>
         <div class="demo-container" style="margin-top: 30px">
@@ -86,6 +89,8 @@
                                 <input class="form-control form-control-lg" id="password" type="password">
 
                                 <input type="button" value="ACCEDER" style="margin-top: 25px; width: 100%; font-weight: bold" onclick="login()" class="button button-uppercase button-primary button-pill">
+                                
+                                <a style="margin-top: 2rem; font-weight: bold" href="{{ route('registrar.index') }}" class="button button-uppercase button-primary button-pill" >Registrarse</a>  
                             </form>
                         </div>
                     </div>
@@ -167,9 +172,10 @@
                 confirmButtonColor: '#28a745',
                 cancelButtonColor: '#d33',
                 confirmButtonText: 'Aceptar',
+                
             }).then((result) => {
                 if (result.isConfirmed) {
-
+                    
                 }
             })
         }

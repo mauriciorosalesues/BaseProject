@@ -9,18 +9,57 @@
 
 
     <title>CRUDPosts</title>
+    <link href="{{ asset('images/logo.png') }}" rel="icon">
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link href="{{ asset('fontawesome-free/css/all.min.css') }}" type="text/css" rel="stylesheet" />
+    <!-- Theme style -->
+    <link href="{{ asset('css/adminlte.min.css') }}" type="text/css" rel="stylesheet" />
+    <!-- Mensajes Toast -->
+    <link href="{{ asset('css/toastr.min.css') }}" type="text/css" rel="stylesheet" />
+    <script src="{{ asset('js/jquery.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/adminlte.min.js') }}" type="text/javascript"></script>
+
+    @yield('content-admin-css')
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-        <div class="container-fluid">
-            <a class="navbar-brand h1" href={{ route('clientes.index') }}>CRUDPosts</a>
-            <div class="justify-end ">
-                <div class="col ">
-                    <a class="btn btn-sm btn-success" href={{ route('clientes.create') }}>Add Post</a>
+    <!--Reutilizar y adaptar el navbar-->
+    <nav class="main-header navbar navbar-expand border-bottom navbar-dark" style="margin: 0; padding: 0;">
+        <ul class="navbar-nav">
+            <li class="nav-item d-none d-sm-inline-block">
+                <a href="#" class="nav-link" style="color: white">CRUD Clientes</a>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item dropdown">
+                <a class="nav-link" data-toggle="dropdown" href="#">
+                    <i class="fas fa-cogs" style="color: white"></i>
+                    <span class="hidden-xs" style="color: white"></span>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="left: inherit; right: 0px;">
+                    <a href="{{ route('clientes.create') }}"  class="dropdown-item">
+                        <i class="fas fa-plus"></i> Agregar
+                    </a>
+                    <div class="dropdown-divider"></div>
+
+                    <a href="{{ route('admin.logout') }}" onclick="event.preventDefault();
+                        document.getElementById('frm-logout').submit();" class="dropdown-item"> <i class="fas fa-sign-out-alt"></i></i></i> Cerrar Sesión</a>
+
+                    <form id="frm-logout" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
                 </div>
-            </div>
+            </li>
+
+        </ul>
     </nav>
+
     <style>
     table{
         height: 300px;
@@ -49,7 +88,7 @@
                     <td> {{ $cliente['telefono'] }}</td>
                     <td> {{ $cliente['correo'] }}</td>
                     <td> {{ $cliente['direccion'] }}</td>
-                    <td> {{ $cliente['cliente'] }}</td>        
+                    <td> {{ $cliente['tipo'] }}</td>        
                 </tr>
             @endforeach
         </table>

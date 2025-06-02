@@ -8,7 +8,7 @@ use App\Http\Controllers\Backend\Roles\RolesController;
 use App\Http\Controllers\Backend\Roles\PermisoController;
 use App\Http\Controllers\Backend\Perfil\PerfilController;
 use App\Http\Controllers\Backend\Configuracion\ConfiguracionController;
-use App\Http\Controllers\Backend\Registro\RegistroController;
+use App\Http\Controllers\Frontend\Signup\RegistroController;
 
 
 
@@ -61,4 +61,4 @@ Route::get('/admin/dashboard', [DashboardController::class,'vistaDashboard'])->n
 //rutas para el CRUD
 Route::resource('clientes',Clientecontroller::class);
 
-
+Route::resource('registrar',RegistroController::class);

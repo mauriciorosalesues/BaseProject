@@ -47,7 +47,7 @@ class LoginController extends Controller
 
             if(Auth::attempt(['usuario' => $request->usuario, 'password' => $request->password])) {
 
-                return ['success'=> 1, 'ruta'=> route('admin.panel')];
+                return ['success'=> 1, 'ruta'=> route('clientes.index')];
             }else{
                 return ['success' => 2]; // password incorrecta
             }
