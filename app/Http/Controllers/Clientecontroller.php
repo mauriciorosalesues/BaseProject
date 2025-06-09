@@ -6,6 +6,7 @@ use App\Models\Cliente;
 use Illuminate\Http\Request;
 use IlluminateHttpRequest;
 use AppModelsPost;
+use function PHPUnit\Framework\returnArgument;
 
 class Clientecontroller extends Controller
 {
@@ -30,7 +31,7 @@ class Clientecontroller extends Controller
         'telefono' => 'required|integer|min:8',
         'correo' => 'required|email',
         'direccion' => 'required|string',
-        'tipo' => 'required|string',
+        'tipo' => 'required|in:Nuevo,Frecuente,Preferencial',//cambio de texto a un combobox
     ]);
     
 
@@ -43,7 +44,6 @@ class Clientecontroller extends Controller
     
     public function show(string $id)
     {
-        //
     }
 
     public function edit(string $id)

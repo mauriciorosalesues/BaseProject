@@ -213,7 +213,7 @@
             var formData = new FormData();
             formData.append('nombre', nombre);
 
-            axios.post(url+'/permisos/nuevo-rol', formData, {
+            axios.post('/admin/permisos/nuevo-rol', formData, {
             })
                 .then((response) => {
                     closeLoading()

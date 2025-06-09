@@ -30,7 +30,7 @@
     <nav class="main-header navbar navbar-expand border-bottom navbar-dark" style="margin: 0; padding: 0;">
         <ul class="navbar-nav">
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="#" class="nav-link" style="color: white">CRUD Clientes</a>
+                <a  class="nav-link" style="color: white">CRUD Clientes</a>
             </li>
         </ul>
 
@@ -43,9 +43,11 @@
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="left: inherit; right: 0px;">
+                    @can('create')                    
                     <a href="{{ route('clientes.create') }}"  class="dropdown-item">
                         <i class="fas fa-plus"></i> Agregar
                     </a>
+                    @endcan
                     <div class="dropdown-divider"></div>
 
                     <a href="{{ route('admin.logout') }}" onclick="event.preventDefault();

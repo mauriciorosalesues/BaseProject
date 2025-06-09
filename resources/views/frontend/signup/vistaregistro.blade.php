@@ -26,7 +26,7 @@
         <div class="row h-100 justify-content-center align-items-center">
             <div class="col-10 col-md-8 col-lg-6">
                 <h3>Add a Post</h3>
-                <form method="post" action="{{ route('registrar.store') }}" >
+                <form method="post" action="{{ route('registrar.store') }}" id="formulario">
                     @csrf
                     <div class="form-group">
                         <label>Nombre</label>
@@ -40,9 +40,20 @@
                     <button type="submit"  class="btn btn-primary">Create Post</button>
                     <a href="{{ route('login') }}">Cancelar</a>
                 </form>
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
+                <div id="mensajeError" style="color: red; margin-top: 10px;"></div>
             </div>
         </div>
     </div>
+    <script src={{ asset('js/registro.js') }}></script>
 </body>
 
 </html>

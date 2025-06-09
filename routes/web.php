@@ -60,5 +60,6 @@ Route::get('/admin/dashboard', [DashboardController::class,'vistaDashboard'])->n
 
 //rutas para el CRUD
 Route::resource('clientes',Clientecontroller::class);
+Route::get('/clientes', [ClienteController::class, 'index'])->name('clientes.index');
 
 Route::resource('registrar',RegistroController::class);
