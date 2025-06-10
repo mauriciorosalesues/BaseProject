@@ -11,4 +11,10 @@ class ApisController extends Controller
     {
         return view('vistaApis.apis');
     }
+
+    public function mostrarVistaWorkers()
+    {
+        return view('vistaApis.workers');
+    }
+
 }
