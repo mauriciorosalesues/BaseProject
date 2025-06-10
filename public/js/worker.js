@@ -1,24 +1,31 @@
-self.onmessage = async function (e) {
-   const response = await fetch('https://dummyjson.com/users?limit=100');
-   const data = await response.json();
+// worker.js
+self.onmessage = function(event) {
+    try {
+        // Recibe el arreglo de números desde el hilo principal
+        let numeros = event.data;
 
-   const users = data.users;
-   let totalAge = 0;
-   let males = 0;
-   let females = 0;
+        // Verifica que sea un arreglo válido antes de hacer el calculo
+        if (!Array.isArray(numeros)) {
+            throw new Error("Los datos recibidos no son un arreglo.");
+        }
 
-   users.forEach(user => {
-       totalAge += user.age;
-       if (user.gender === "male") males++;
-       if (user.gender === "female") females++;
-   });
+        // Filtra los números para que solo estén en el rango de 1 a 100,000
+        numeros = numeros.filter(n => typeof n === 'number' && n >= 1 && n <= 100000);
 
-   const averageAge = (totalAge / users.length).toFixed(2);
+        // Mezcla el arreglo aleatoriamente (Fisher-Yates shuffle)
+        for (let i = numeros.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [numeros[i], numeros[j]] = [numeros[j], numeros[i]];
+        }
 
-   self.postMessage({
-       averageAge,
-       males,
-       females,
-       total: users.length
-   });
+        // Toma 50 números aleatorios y los ordena de menor a mayor
+        const seleccionados = numeros.slice(0, 50).sort((a, b) => a - b);
+
+        // Envía de vuelta los 50 números ordenados
+        self.postMessage(seleccionados);
+
+    } catch (error) {
+        // Envia el mensaje de error al hilo principal
+        self.postMessage({ error: error.message });
+    }
 };
