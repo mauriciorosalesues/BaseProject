@@ -365,13 +365,18 @@
 
     // Descargar y limpiar
     btnDescargar.addEventListener('click', () => {
-        setTimeout(() => {
-            ctxFoto.clearRect(0, 0, fotoCanvas.width, fotoCanvas.height);
-        }, 100);
+        try {
+            setTimeout(() => {
+                ctxFoto.clearRect(0, 0, fotoCanvas.width, fotoCanvas.height);
+            }, 100);
 
-        // Mostrar toast de éxito
-        const toast = new bootstrap.Toast(document.getElementById('toastFoto'));
-        toast.show();
+            // Mostrar toast de éxito
+            const toast = new bootstrap.Toast(document.getElementById('toastFoto'));
+            toast.show();
+        } catch (error) {
+            alert("Ocurrió un error al limpiar el canvas o mostrar la notificación.");
+            console.error(error);
+        }
     });
 
     // vistas
