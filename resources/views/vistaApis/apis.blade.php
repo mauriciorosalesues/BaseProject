@@ -160,11 +160,18 @@
 
     function getLocation() {
         document.getElementById("spinner").classList.remove("d-none");
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition, showError);
-        } else {
-            alert("Geolocalización no soportada.");
+        
+        try {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                alert("Geolocalización no soportada.");
+                document.getElementById("spinner").classList.add("d-none");
+            }
+        } catch (error) {
+            alert("Ocurrió un error al intentar obtener la ubicación.");
             document.getElementById("spinner").classList.add("d-none");
+            console.error(error);
         }
     }
 
