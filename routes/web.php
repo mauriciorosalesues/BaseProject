@@ -10,7 +10,7 @@ use App\Http\Controllers\Backend\Configuracion\ConfiguracionController;
 use App\Http\Controllers\Backend\Registro\RegistroController;
 
 use App\Http\Controllers\ApisController;
-
+use App\Http\Controllers\WorkerController;
 
 use App\Http\Controllers\Backend\Dashboard\DashboardController;
 
@@ -60,4 +60,4 @@ Route::get('/admin/dashboard', [DashboardController::class,'vistaDashboard'])->n
 
 
 Route::get('/apis', [ApisController::class, 'mostrarVistaApis']);
-Route::get('/workers', [ApisController::class, 'mostrarVistaWorkers']);
+Route::get('/workers', [WorkerController::class, 'mostrarWebWorker']);
