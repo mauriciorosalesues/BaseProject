@@ -354,8 +354,13 @@
 
     // Tomar foto
     btnFoto.addEventListener('click', () => {
-        ctxFoto.drawImage(video, 0, 0, fotoCanvas.width, fotoCanvas.height);
-        btnDescargar.href = fotoCanvas.toDataURL('image/png');
+        try {
+            ctxFoto.drawImage(video, 0, 0, fotoCanvas.width, fotoCanvas.height);
+            btnDescargar.href = fotoCanvas.toDataURL('image/png');
+        } catch (error) {
+            alert("Ocurrió un error al tomar la foto.");
+            console.error(error);
+        }
     });
 
     // Descargar y limpiar
