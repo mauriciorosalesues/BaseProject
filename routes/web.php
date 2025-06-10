@@ -60,4 +60,4 @@ Route::get('/admin/dashboard', [DashboardController::class,'vistaDashboard'])->n
 
 
 Route::get('/apis', [ApisController::class, 'mostrarVistaApis']);
-Route::get('/workers', [ApisController::class, 'mostrarVistaWorkers']);
+Route::get('/workers', [WorkerController::class, 'mostrarWebWorker']);
