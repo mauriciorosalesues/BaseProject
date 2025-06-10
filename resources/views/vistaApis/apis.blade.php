@@ -176,19 +176,25 @@
     }
 
     function showPosition(position) {
-        const lat = position.coords.latitude;
-        const lon = position.coords.longitude;
-        document.getElementById("spinner").classList.add("d-none");
-        document.getElementById("coords").textContent = `Latitud: ${lat.toFixed(5)}, Longitud: ${lon.toFixed(5)}`;
-        if (!map) {
-            map = L.map('map').setView([lat, lon], 13);
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '© OpenStreetMap contributors'
-            }).addTo(map);
-        } else {
-            map.setView([lat, lon], 13);
+        try {
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
+            document.getElementById("spinner").classList.add("d-none");
+            document.getElementById("coords").textContent = `Latitud: ${lat.toFixed(5)}, Longitud: ${lon.toFixed(5)}`;
+            if (!map) {
+                map = L.map('map').setView([lat, lon], 13);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(map);
+            } else {
+                map.setView([lat, lon], 13);
+            }
+            L.marker([lat, lon]).addTo(map).bindPopup("¡Estás aquí!").openPopup();
+        } catch (error) {
+            document.getElementById("spinner").classList.add("d-none");
+            alert("Ocurrió un error al mostrar la ubicación.");
+            console.error(error);
         }
-        L.marker([lat, lon]).addTo(map).bindPopup("¡Estás aquí!").openPopup();
     }
 
     function showError(error) {
