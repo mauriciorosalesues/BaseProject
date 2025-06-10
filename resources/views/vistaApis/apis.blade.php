@@ -289,17 +289,22 @@
     });
 
     function guardarImagen() {
-        const tempCanvas = document.createElement('canvas');
-        const tempCtx = tempCanvas.getContext('2d');
-        tempCanvas.width = canvas.width;
-        tempCanvas.height = canvas.height;
-        tempCtx.fillStyle = "white";
-        tempCtx.fillRect(0, 0, tempCanvas.width, tempCanvas.height);
-        tempCtx.drawImage(canvas, 0, 0);
-        const enlace = document.createElement('a');
-        enlace.download = "mi_dibujo.jpg";
-        enlace.href = tempCanvas.toDataURL("image/jpeg", 1.0);
-        enlace.click();
+        try {
+            const tempCanvas = document.createElement('canvas');
+            const tempCtx = tempCanvas.getContext('2d');
+            tempCanvas.width = canvas.width;
+            tempCanvas.height = canvas.height;
+            tempCtx.fillStyle = "white";
+            tempCtx.fillRect(0, 0, tempCanvas.width, tempCanvas.height);
+            tempCtx.drawImage(canvas, 0, 0);
+            const enlace = document.createElement('a');
+            enlace.download = "mi_dibujo.jpg";
+            enlace.href = tempCanvas.toDataURL("image/jpeg", 1.0);
+            enlace.click();
+        } catch (error) {
+            alert("Ocurrió un error al guardar la imagen.");
+            console.error(error);
+        }
     }
 
     function limpiarCanvas() {
