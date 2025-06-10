@@ -1,6 +1,6 @@
 # Parcial 3 - Desarrollo y Técnicas de Aplicaciones Web (DTW)
 
-![Logo UES](https://upload.wikimedia.org/wikipedia/commons/c/c8/Logo_UES.jpg)
+![Logo UES](https://upload.wikimedia.org/wikipedia/commons/archive/f/fa/20161009181209%21Escudo_de_la_Universidad_de_El_Salvador.svg)
 
 ## Integrantes
 
