@@ -40,10 +40,48 @@
                     </ul>
                  </li>
                 @endcan
+                 <!-- Opciones de menu parcial 3 -->
+                 <li class="nav-item">
 
+                     <a href="#" class="nav-link nav-">
+                        <i class="far fa-edit"></i>
+                        <p>
+                            Parcial 3 DAM
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
 
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                        <a href="{{ route('admin.permisos.index') }}" target="frameprincipal" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>API Geocalización</p>
+                            </a>
+                        </li>
 
+                        <li class="nav-item">
+                            <a href="#" target="frameprincipal" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>API Canva</p>
+                            </a>
+                        </li>
 
+                        <li class="nav-item">
+                            <a href="#" target="frameprincipal" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>API Video</p>
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="#" target="frameprincipal" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Web Workers</p>
+                            </a>
+                        </li>
+                    </ul>
+                 </li>
+            
             </ul>
         </nav>
 
