@@ -381,18 +381,23 @@
 
     // vistas
     function mostrarSeccion(seccion) {
-        // Oculta todas las secciones
-        document.getElementById('seccionGeo').classList.add('d-none');
-        document.getElementById('seccionCanvas').classList.add('d-none');
-        document.getElementById('seccionCamara').classList.add('d-none');
+        try {
+            // Oculta todas las secciones
+            document.getElementById('seccionGeo').classList.add('d-none');
+            document.getElementById('seccionCanvas').classList.add('d-none');
+            document.getElementById('seccionCamara').classList.add('d-none');
 
-        // Muestra solo la correspondiente
-        if (seccion === 'geo') {
-            document.getElementById('seccionGeo').classList.remove('d-none');
-        } else if (seccion === 'canvas') {
-            document.getElementById('seccionCanvas').classList.remove('d-none');
-        } else if (seccion === 'camara') {
-            document.getElementById('seccionCamara').classList.remove('d-none');
+            // Muestra solo la correspondiente
+            if (seccion === 'geo') {
+                document.getElementById('seccionGeo').classList.remove('d-none');
+            } else if (seccion === 'canvas') {
+                document.getElementById('seccionCanvas').classList.remove('d-none');
+            } else if (seccion === 'camara') {
+                document.getElementById('seccionCamara').classList.remove('d-none');
+            }
+        } catch (error) {
+            alert("Ocurrió un error al mostrar la sección.");
+            console.error(error);
         }
     }
 
