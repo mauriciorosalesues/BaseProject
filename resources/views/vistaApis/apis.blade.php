@@ -402,8 +402,13 @@
     }
 
     // Mostrar la sección predeterminada (geolocalización)
-    document.addEventListener('DOMContentLoaded', function() {
-        mostrarSeccion('geo');
+       document.addEventListener('DOMContentLoaded', function() {
+        try {
+            mostrarSeccion('geo');
+        } catch (error) {
+            alert("Ocurrió un error al cargar la sección predeterminada.");
+            console.error(error);
+        }
     });
 </script>
 
