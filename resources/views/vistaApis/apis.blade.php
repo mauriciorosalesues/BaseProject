@@ -198,20 +198,25 @@
     }
 
     function showError(error) {
-        document.getElementById("spinner").classList.add("d-none");
-        switch (error.code) {
-            case error.PERMISSION_DENIED:
-                alert("Permiso denegado.");
-                break;
-            case error.POSITION_UNAVAILABLE:
-                alert("Ubicación no disponible.");
-                break;
-            case error.TIMEOUT:
-                alert("Tiempo excedido.");
-                break;
-            case error.UNKNOWN_ERROR:
-                alert("Error desconocido.");
-                break;
+        try {
+            document.getElementById("spinner").classList.add("d-none");
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    alert("Permiso denegado.");
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    alert("Ubicación no disponible.");
+                    break;
+                case error.TIMEOUT:
+                    alert("Tiempo excedido.");
+                    break;
+                case error.UNKNOWN_ERROR:
+                    alert("Error desconocido.");
+                    break;
+            }
+        } catch (e) {
+            alert("Ocurrió un error al manejar el error de geolocalización.");
+            console.error(e);
         }
     }
 
