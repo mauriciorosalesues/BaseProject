@@ -322,23 +322,28 @@
     let streamActivo = null;
 
     function solicitarCamara() {
-        if (streamActivo) {
-            // Detener flujo anterior
-            streamActivo.getTracks().forEach(track => track.stop());
-            streamActivo = null;
-        }
+        try {
+            if (streamActivo) {
+                // Detener flujo anterior
+                streamActivo.getTracks().forEach(track => track.stop());
+                streamActivo = null;
+            }
 
-        navigator.mediaDevices.getUserMedia({
-                video: true
-            })
-            .then(stream => {
-                streamActivo = stream;
-                video.srcObject = stream;
-            })
-            .catch(error => {
-                alert("No se pudo acceder a la cámara.");
-                console.error(error);
-            });
+            navigator.mediaDevices.getUserMedia({
+                    video: true
+                })
+                .then(stream => {
+                    streamActivo = stream;
+                    video.srcObject = stream;
+                })
+                .catch(error => {
+                    alert("No se pudo acceder a la cámara.");
+                    console.error(error);
+                });
+        } catch (error) {
+            alert("Ocurrió un error al solicitar la cámara.");
+            console.error(error);
+        }
     }
 
     // Solicitar al cargar
