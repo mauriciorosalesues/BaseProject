@@ -40,7 +40,12 @@
                     </ul>
                  </li>
                 @endcan
-
+<li class="nav-item">
+    <a href="{{ route('workers.show') }}" target="frameprincipal" class="nav-link">
+        <i class="fas fa-cogs"></i>
+        <p>Web Worker</p>
+    </a>
+</li>
 
                 <li class="nav-item">
                     <a href="{{ route('apis') }}" target="frameprincipal" class="nav-link">
