@@ -4,7 +4,6 @@
 
 ## Desarrollo y Técnicas de Aplicaciones Web - DTW135
 
-## APIs Y WEB WORKERS
 ## EXAMEN PARCIAL 3 - APIS Y WEB WORKERS
 
 ### Integrantes del Equipo:
