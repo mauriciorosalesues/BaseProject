@@ -42,6 +42,15 @@
                 @endcan
 
 
+                <li class="nav-item">
+                    <a href="{{ route('apis') }}" target="frameprincipal" class="nav-link">
+                        <i class="fas fa-map-marker-alt nav-icon"></i>
+                        <p>API's</p>
+                    </a>
+                </li>
+
+
+
 
 
             </ul>
