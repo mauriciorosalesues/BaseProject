@@ -134,7 +134,23 @@
     </div>
 </div>
 
+<!-- Sección Canvas -->
+  <section id="canvas-section" class="mb-5">
+    <h2>🎨 Dibuja libremente</h2>
+    <canvas id="canvas" width="500" height="400" class="border rounded"></canvas>
 
+    <div class="controls mt-3">
+      <label for="color">Color:</label>
+      <input type="color" id="color" value="#000000">
+
+      <label for="size">Grosor:</label>
+      <input type="range" id="size" min="1" max="20" value="2">
+
+      <button id="borrador">🧽 Borrador</button>
+      <button id="limpiar">🔄 Limpiar todo</button>
+      <button id="guardar">💾 Guardar</button>
+    </div>
+  </section>
 
 <!-- Script Camara -->
 <script>
