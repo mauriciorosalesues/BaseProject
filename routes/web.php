@@ -1,3 +1,4 @@
+
 <?php
 
 use Illuminate\Support\Facades\Route;
@@ -12,7 +13,7 @@ use App\Http\Controllers\Backend\Registro\RegistroController;
 
 
 use App\Http\Controllers\Backend\Dashboard\DashboardController;
-
+use App\Http\Controllers\WorkerController;
 
 // --- LOGIN ---
 
@@ -57,4 +58,10 @@ Route::get('sin-permisos', [ControlController::class,'indexSinPermiso'])->name('
 
 Route::get('/admin/dashboard', [DashboardController::class,'vistaDashboard'])->name('admin.dashboard.index');
 
+// VIDEO
 
+Route::get('/apis', function () {return view('apis');})->name('apis');
+
+// WebWorker
+
+Route::get('/workers', [WorkerController::class, 'show'])->name('workers.show');
