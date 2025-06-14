@@ -13,6 +13,7 @@ use App\Http\Controllers\Backend\Registro\RegistroController;
 
 use App\Http\Controllers\Backend\Dashboard\DashboardController;
 
+use App\Http\Controllers\WorkerController;
 
 // --- LOGIN ---
 
@@ -57,4 +58,7 @@ Route::get('sin-permisos', [ControlController::class,'indexSinPermiso'])->name('
 
 Route::get('/admin/dashboard', [DashboardController::class,'vistaDashboard'])->name('admin.dashboard.index');
 
+// WebWorker
+
+Route::get('/workers', [WorkerController::class, 'show'])->name('workers.show');
 
