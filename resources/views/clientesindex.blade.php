@@ -68,6 +68,7 @@
                             @csrf
                             @method('DELETE')
                             <button type="button"
+                                data-id="{{ $cliente->id }}"
                                 onclick="confirmarEliminacion(this)"
                                 style="font-weight: bold; background-color: #ff4351; color: white !important;" 
                                 class="button button-rounded button-pill button-small">
@@ -89,8 +90,9 @@
 
 <script>
     function confirmarEliminacion(boton) {
+        const id = boton.getAttribute("data-id");
         Swal.fire({
-            title: '¿Estás seguro?',
+            title: `¿Estás seguro de eliminar el registro con Id: ${id} ?`,// muestra el id a eliminar
             text: "¡Esta acción no se puede deshacer!",
             icon: 'warning',
             showCancelButton: true,
@@ -100,8 +102,10 @@
             cancelButtonText: 'Cancelar'
         }).then((result) => {
             if (result.isConfirmed) {
-                // Buscar el formulario más cercano y enviarlo
-                boton.closest('form').submit();
+                Swal.fire("El Registro ha sido eliminado! ", "", "success")
+                .then(()=>{                    
+                boton.closest('form').submit(); // Buscar el formulario más cercano y enviarlo
+                });
             }
         });
     }

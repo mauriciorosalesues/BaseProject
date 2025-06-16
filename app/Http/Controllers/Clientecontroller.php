@@ -62,7 +62,7 @@ class Clientecontroller extends Controller
     {
         $cliente= Cliente::findOrFail($id);
         $cliente ->delete();
-        return redirect()->route('admin.panel');
+        return redirect()->route('clientes.index');
 
     }
 }

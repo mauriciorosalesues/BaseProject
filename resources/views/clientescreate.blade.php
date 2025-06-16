@@ -19,32 +19,33 @@
     <script src="{{ asset('js/jquery.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('js/adminlte.min.js') }}" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script><!--Libreria alertas -->
 
 
-    <title>Create Post</title>
+    <title>Añadir Cliente</title>
 
   
     <div class="container h-100 mt-5">
         <div class="row h-100 justify-content-center align-items-center">
             <div class="col-10 col-md-8 col-lg-6">
-                <h3>Add a Post</h3>
+                <h3>Agregar cliente</h3>
                 <form method="post" action="{{ route('clientes.store') }}" id="formulario" >
                     @csrf
                     <div class="form-group">
                         <label>Nombre</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
+                        <input type="text" class="form-control" id="name" name="name" >
                     </div>
                     <div class="form-group">
                         <label>Telefono</label>
-                        <input type="text" class="form-control" id="telefono" name="telefono" required>
+                        <input type="text" class="form-control" id="telefono" name="telefono" >
                     </div>
                     <div class="form-group">
                         <label>Correo</label>
-                        <input type="text" class="form-control" id="correo" name="correo" required>
+                        <input type="text" class="form-control" id="correo" name="correo" >
                     </div>
                     <div class="form-group">
                         <label>Direccion</label>
-                        <input type="text" class="form-control" id="direccion" name="direccion" required>
+                        <input type="text" class="form-control" id="direccion" name="direccion" >
                     </div>
                     <div class="form-group">
                         <label for="selector">
@@ -63,17 +64,6 @@
                     <a href="{{ route('clientes.index') }}">Cancelar</a>
                     @endcan
                 </form>
-                @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-                @endif
-
-                <div id="mensajeError" style="color: red; margin-top: 10px;"></div>
             </div>
         </div>
     </div>
