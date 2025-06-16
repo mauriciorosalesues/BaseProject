@@ -79,6 +79,43 @@
     </div>
     <!--Llamada a las validaciones js -->
     <script src={{ asset('js/cliente.js') }}></script>
+    <script>
+    // Función para guardar datos del formulario en LocalStorage
+    function guardarFormularioCliente() {
+        const cliente = {
+            name: document.getElementById('name').value,
+            telefono: document.getElementById('telefono').value,
+            correo: document.getElementById('correo').value,
+            direccion: document.getElementById('direccion').value,
+            tipo: document.getElementById('tipo').value
+        };
+        localStorage.setItem('formularioCliente', JSON.stringify(cliente));
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // Recuperar datos si existen
+        const datos = JSON.parse(localStorage.getItem('formularioCliente'));
+        if (datos) {
+            document.getElementById('name').value = datos.name || '';
+            document.getElementById('telefono').value = datos.telefono || '';
+            document.getElementById('correo').value = datos.correo || '';
+            document.getElementById('direccion').value = datos.direccion || '';
+            document.getElementById('tipo').value = datos.tipo || '';
+        }
+
+        // Guardar cada vez que se escriba en los campos
+        ['name', 'telefono', 'correo', 'direccion', 'tipo'].forEach(id => {
+            document.getElementById(id).addEventListener('input', guardarFormularioCliente);
+        });
+
+        // Limpiar el LocalStorage si el formulario se envía correctamente
+        document.getElementById('formulario').addEventListener('submit', () => {
+            localStorage.removeItem('formularioCliente');
+        });
+    });
+
+    
+</script>
 </body>
 
 </html>
