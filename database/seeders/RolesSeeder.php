@@ -21,6 +21,11 @@ class RolesSeeder extends Seeder
 
         // ROLES Y PERMISOS
         Permission::create(['name' => 'sidebar.roles.y.permisos', 'description' => 'sidebar seccion roles y permisos'])->syncRoles($roleAdmin);
+        Permission::create(['name' => 'create']);
+        Permission::create(['name' => 'edit']);
+        Permission::create(['name' => 'delete']);
+        Permission::create(['name' => 'store']);
+        $roleAdmin->givePermissionTo(['create', 'edit', 'delete', 'store']);
 
         // PERMISO PARA VISTA DASHBOARD
         Permission::create(['name' => 'sidebar.dashboard', 'description' => 'sidebar dashboard'])->syncRoles($roleUsuario);
