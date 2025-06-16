@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/login/bootstrap.min.css') }}">
 
     <!-- icono del sistema -->
-    <link href="{{ asset('images/icono-sistemalogo.png') }}" rel="icon">
+    <link href="{{ asset('images/logo_0.png') }}" rel="icon">
     <!-- libreria -->
     <link href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}" type="text/css" rel="stylesheet" />
 
@@ -78,10 +78,10 @@
 
                         <div class="p-5 bg-white rounded shadow-lg">
                             <div class="text-center image-size-small position-relative">
-                                <img src="{{ asset('images/logo.png') }}" class=" p-2">
+                                <img src="{{ asset('images/logo_0.png') }}" class=" p-2">
                             </div>
                             <h3 class="mb-2 text-center pt-5"><strong>&nbsp;</strong></h3>
-                            <p class="text-center lead" style="font-weight: bold">BASE</p>
+                            <p class="text-center lead" style="font-weight: bold">Inicio de Sesión</p>
                             <form>
                                 <label style="margin-top: 10px" class="font-500">Usuario</label>
                                 <input class="form-control form-control-lg mb-3" id="usuario" autocomplete="off" type="text">

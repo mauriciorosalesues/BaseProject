@@ -8,7 +8,7 @@
 
     <ul class="navbar-nav">
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="#" class="nav-link" style="color: white">crud</a>
+            <a href="/panel" class="nav-link" style="color: white">crud</a>
         </li>
     </ul>
 
@@ -25,6 +25,12 @@
                     <i class="fas fa-user"></i></i> Editar Perfil
                 </a>
                 <div class="dropdown-divider"></div>
+                @can('create')                    
+                    <a href="{{ route('clientes.create') }}" target="frameprincipal" class="dropdown-item">
+                        <i class="fas fa-plus"></i> Agregar
+                    </a>
+                    @endcan
+                    <div class="dropdown-divider"></div>
 
                 <a href="{{ route('admin.logout') }}" onclick="event.preventDefault();
                     document.getElementById('frm-logout').submit();" class="dropdown-item"> <i class="fas fa-sign-out-alt"></i></i></i> Cerrar Sesión</a>

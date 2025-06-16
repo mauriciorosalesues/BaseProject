@@ -9,59 +9,28 @@
 
 
     <title>CRUDPosts</title>
-    <link href="{{ asset('images/logo.png') }}" rel="icon">
-    <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Font Awesome Icons -->
-    <link href="{{ asset('fontawesome-free/css/all.min.css') }}" type="text/css" rel="stylesheet" />
-    <!-- Theme style -->
-    <link href="{{ asset('css/adminlte.min.css') }}" type="text/css" rel="stylesheet" />
-    <!-- Mensajes Toast -->
-    <link href="{{ asset('css/toastr.min.css') }}" type="text/css" rel="stylesheet" />
-    <script src="{{ asset('js/jquery.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('js/bootstrap.bundle.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('js/adminlte.min.js') }}" type="text/javascript"></script>
+    <link href="{{ asset('images/logo_0.png') }}" rel="icon">
+     <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+
+    <!-- Font Awesome iconos -->
+    <link href="{{ asset('fontawesome-free/css/all.min.css') }}" rel="stylesheet">
+
+    <!-- Toastr (mensajes tipo toast) -->
+    <link href="{{ asset('css/toastr.min.css') }}" rel="stylesheet">
+
+    <!-- Estilo de botones -->
+    <link href="{{ asset('css/buttons_estilo.css') }}" rel="stylesheet">
+
+    <!-- jQuery y Bootstrap JS -->
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 
     @yield('content-admin-css')
 </head>
 
 <body>
-    <!--Reutilizar y adaptar el navbar-->
-    <nav class="main-header navbar navbar-expand border-bottom navbar-dark" style="margin: 0; padding: 0;">
-        <ul class="navbar-nav">
-            <li class="nav-item d-none d-sm-inline-block">
-                <a  class="nav-link" style="color: white">CRUD Clientes</a>
-            </li>
-        </ul>
-
-        <ul class="navbar-nav ml-auto">
-
-            <li class="nav-item dropdown">
-                <a class="nav-link" data-toggle="dropdown" href="#">
-                    <i class="fas fa-cogs" style="color: white"></i>
-                    <span class="hidden-xs" style="color: white"></span>
-                </a>
-
-                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="left: inherit; right: 0px;">
-                    @can('create')                    
-                    <a href="{{ route('clientes.create') }}"  class="dropdown-item">
-                        <i class="fas fa-plus"></i> Agregar
-                    </a>
-                    @endcan
-                    <div class="dropdown-divider"></div>
-
-                    <a href="{{ route('admin.logout') }}" onclick="event.preventDefault();
-                        document.getElementById('frm-logout').submit();" class="dropdown-item"> <i class="fas fa-sign-out-alt"></i></i></i> Cerrar Sesión</a>
-
-                    <form id="frm-logout" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
-                        {{ csrf_field() }}
-                    </form>
-                </div>
-            </li>
-
-        </ul>
-    </nav>
-
+    
     <style>
     table{
         height: 300px;
@@ -69,36 +38,73 @@
     }
 </style>
 <div class="container">
-    <h2>Clientes</h2> 
-    <tbody>
-        <table class="table-striped table-dark">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Id</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">telefono</th>
-                    <th scope="col">correo</th>
-                    <th scope="col">direccion</th>
-                    <th scope="col">Cliente</th>
-                </tr>
-            </thead>
-            
+    <h2 class="text-center">Clientes</h2> 
+    <table class="table table-striped table-dark text-center">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Cliente</th>
+                @canany(['create','store','delete','edit'])
+                    <th scope="col">Acciones</th>
+                @endcanany
+            </tr>
+        </thead>
+        <tbody>
             @foreach ($clientes as $cliente)
                 <tr>
-                    <td> {{ $cliente['id'] }}</td>
-                    <td> {{ $cliente['name'] }}</td>
-                    <td> {{ $cliente['telefono'] }}</td>
-                    <td> {{ $cliente['correo'] }}</td>
-                    <td> {{ $cliente['direccion'] }}</td>
-                    <td> {{ $cliente['tipo'] }}</td>        
+                    <td>{{ $cliente['id'] }}</td>
+                    <td>{{ $cliente['name'] }}</td>
+                    <td>{{ $cliente['telefono'] }}</td>
+                    <td>{{ $cliente['correo'] }}</td>
+                    <td>{{ $cliente['direccion'] }}</td>
+                    <td>{{ $cliente['tipo'] }}</td>
+                    @canany(['create','store','delete','edit'])
+                    <td>
+                        <form action="{{ route('clientes.destroy', $cliente->id) }}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button type="button"
+                                onclick="confirmarEliminacion(this)"
+                                style="font-weight: bold; background-color: #ff4351; color: white !important;" 
+                                class="button button-rounded button-pill button-small">
+                                Eliminar
+                            </button>
+
+                        </form>
+                    </td>
+                    @endcanany
                 </tr>
             @endforeach
-        </table>
-    </tbody>
-    
-
+        </tbody>
+    </table>
 </div>
+
     
 </body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    function confirmarEliminacion(boton) {
+        Swal.fire({
+            title: '¿Estás seguro?',
+            text: "¡Esta acción no se puede deshacer!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Sí, eliminar',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Buscar el formulario más cercano y enviarlo
+                boton.closest('form').submit();
+            }
+        });
+    }
+</script>
 
 </html>
