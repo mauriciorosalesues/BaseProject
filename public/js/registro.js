@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () { //carga el script cuando la pagina este carga
     const formulario = document.getElementById('formulario');
-    const mensajeError = document.getElementById('mensajeError');
 
     formulario.addEventListener('submit', function (evento) {
         evento.preventDefault(); // previene el envío del formulario para poder validarlo con Javascript
@@ -11,16 +10,30 @@ document.addEventListener("DOMContentLoaded", function () { //carga el script cu
 
         //validación de los campos
         if (nombre.trim() === '') {
-            mensajeError.innerText = 'El campo nombre no puede estar vacío.';
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "El campo nombre no puede estar vacío.",                
+            });
             return;
         }
         if (password.trim()==''){
-            mensajeError.innerText = 'El campo contraseña no puede estar vacío.';
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "El campo contraseña no puede estar vacío",                
+            });
             return;
         }        
         
-
-        mensajeError.innerText = '';
+        Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Usuario Creado",
+        showConfirmButton: false,
+        timer: 1500
+        });
+        sessionStorage.setItem("mostrarAlerta", "true"); // Marca para la siguiente vista
         formulario.submit(); // realiza el submit si pasa todas las validaciones
     });
     

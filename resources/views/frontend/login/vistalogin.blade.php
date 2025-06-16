@@ -183,7 +183,18 @@
             toastr.error('Error al iniciar sesión');
         }
     }
-
+    window.addEventListener("DOMContentLoaded", () => {
+        if (sessionStorage.getItem("mostrarAlerta") === "true") {
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Usuario Creado",
+                showConfirmButton: false,
+                timer: 1500
+            });
+            sessionStorage.removeItem("mostrarAlerta");
+        }
+    });
 
 </script>
 </body>
