@@ -59,7 +59,7 @@ Route::get('sin-permisos', [ControlController::class,'indexSinPermiso'])->name('
 Route::get('/admin/dashboard', [DashboardController::class,'vistaDashboard'])->name('admin.dashboard.index');
 
 //rutas para el CRUD
-Route::resource('clientes',Clientecontroller::class);
+Route::resource('clientes', ClienteController::class);
 Route::get('/clientes', [ClienteController::class, 'index'])->name('clientes.index');
 
 Route::resource('registrar',RegistroController::class);

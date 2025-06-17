@@ -48,14 +48,28 @@ class Clientecontroller extends Controller
 
     public function edit(string $id)
     {
-        //
+        $cliente = Cliente::findOrFail($id);
+        return view('clientesedit', compact('cliente'));
     }
+
 
    
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:100',
+            'telefono' => 'required|integer|min:8',
+            'correo' => 'required|email',
+            'direccion' => 'required|string',
+            'tipo' => 'required|in:Nuevo,Frecuente,Preferencial',
+        ]);
+
+        $cliente = Cliente::findOrFail($id);
+        $cliente->update($request->all());
+
+        return redirect()->route('clientes.index')->with('success', 'Cliente actualizado correctamente');
     }
+
 
    
     public function destroy(string $id)

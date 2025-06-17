@@ -76,6 +76,12 @@
                             </button>
 
                         </form>
+
+                        <a href="{{ route('clientes.edit', $cliente->id) }}"
+                            style="font-weight: bold; background-color: #f0ad4e; color: white !important;" 
+                            class="button button-rounded button-pill button-small">
+                            Editar
+                        </a>
                     </td>
                     @endcanany
                 </tr>
@@ -87,6 +93,8 @@
     
 </body>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="{{ asset('js/toastr.min.js') }}" type="text/javascript"></script>
+
 
 <script>
     function confirmarEliminacion(boton) {
@@ -112,3 +120,16 @@
 </script>
 
 </html>
+
+@if (session('success'))
+    <script>
+        toastr.success("{{ session('success') }}");
+    </script>
+@endif
+
+@if (session('error'))
+    <script>
+        toastr.error("{{ session('error') }}");
+    </script>
+@endif
+
