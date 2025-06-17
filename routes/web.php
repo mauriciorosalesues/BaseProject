@@ -9,9 +9,7 @@ use App\Http\Controllers\Backend\Roles\PermisoController;
 use App\Http\Controllers\Backend\Perfil\PerfilController;
 use App\Http\Controllers\Backend\Configuracion\ConfiguracionController;
 use App\Http\Controllers\Frontend\Signup\RegistroController;
-
-
-
+use App\Http\Controllers\WeatherController;
 use App\Http\Controllers\Backend\Dashboard\DashboardController;
 
 
@@ -63,3 +61,6 @@ Route::resource('clientes', ClienteController::class);
 Route::get('/clientes', [ClienteController::class, 'index'])->name('clientes.index');
 
 Route::resource('registrar',RegistroController::class);
+
+Route::get('/weather', [WeatherController::class, 'show'])->name('weather');
+

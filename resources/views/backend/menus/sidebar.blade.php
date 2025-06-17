@@ -47,6 +47,12 @@
                         </a>
                 </li>
 
+                <li class="nav-item">
+                    <a href="{{ route('weather') }}" target="frameprincipal" class="nav-link">
+                        <i class="fas fa-cloud-sun nav-icon"></i>
+                        <p>Ver clima actual</p>
+                    </a>
+                </li>
 
 
             </ul>
@@ -55,9 +61,3 @@
 
     </div>
 </aside>
-
-
-
-
-
-
