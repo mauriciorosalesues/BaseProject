@@ -48,15 +48,13 @@
                         <input type="text" class="form-control" id="direccion" name="direccion" >
                     </div>
                     <div class="form-group">
-                        <label for="selector">
-                            <span>Selecciona el tipo de cliente:</span>
-                            </label>
-                            <select id="tipo" name="tipo">
+                        <label for="tipo">Tipo de Cliente:</label>
+                        <select id="tipo" name="tipo" class="form-control">
                             <option value=""></option>
                             <option value="Nuevo">Nuevo</option>
-                            <option value="Frecuente">Frecuente</option>
-                            <option value="Preferencial">Preferencial</option>
-                            </select>
+                            <option value="Frecuente" >Frecuente</option>
+                            <option value="Preferencial" >Preferencial</option>
+                        </select>
                     </div>                   
                     <br>
                     @canany(['create','store'])                    
