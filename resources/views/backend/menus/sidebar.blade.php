@@ -38,7 +38,16 @@
                         </li>
 
                     </ul>
+
                  </li>
+
+                 <li class="nav-item">
+                    <a class="nav-link" href="{{ route('events.index') }}">
+                        <i class="fas fa-globe-americas"></i>
+                        <span>Eventos</span>
+                    </a>
+                </li>
+
                 @endcan
 
 
