@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Clientecontroller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\Login\LoginController;
 use App\Http\Controllers\Controles\ControlController;
@@ -7,10 +8,8 @@ use App\Http\Controllers\Backend\Roles\RolesController;
 use App\Http\Controllers\Backend\Roles\PermisoController;
 use App\Http\Controllers\Backend\Perfil\PerfilController;
 use App\Http\Controllers\Backend\Configuracion\ConfiguracionController;
-use App\Http\Controllers\Backend\Registro\RegistroController;
-
-
-
+use App\Http\Controllers\Frontend\Signup\RegistroController;
+use App\Http\Controllers\WeatherController;
 use App\Http\Controllers\Backend\Dashboard\DashboardController;
 
 
@@ -57,4 +56,11 @@ Route::get('sin-permisos', [ControlController::class,'indexSinPermiso'])->name('
 
 Route::get('/admin/dashboard', [DashboardController::class,'vistaDashboard'])->name('admin.dashboard.index');
 
+//rutas para el CRUD
+Route::resource('clientes', ClienteController::class);
+Route::get('/clientes', [ClienteController::class, 'index'])->name('clientes.index');
+
+Route::resource('registrar',RegistroController::class);
+
+Route::get('/weather', [WeatherController::class, 'show'])->name('weather');
 

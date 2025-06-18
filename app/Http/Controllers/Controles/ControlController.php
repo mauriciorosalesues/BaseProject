@@ -19,7 +19,7 @@ class ControlController extends Controller
 
         // ADMINISTRADOR SISTEMA
         if($user->hasRole('admin')){
-            $ruta = 'admin.roles.index';
+            $ruta = 'clientes.index';
         }
         else if($user->hasRole('usuario')){
             $ruta = 'admin.dashboard.index';
