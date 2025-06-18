@@ -64,24 +64,26 @@
                     <td>{{ $cliente['tipo'] }}</td>
                     @canany(['create','store','delete','edit'])
                     <td>
-                        <form action="{{ route('clientes.destroy', $cliente->id) }}" method="post">
+
+                        <a href="{{ route('clientes.edit', $cliente->id) }}"
+                            style="font-weight: bold; background-color: #f0ad4e; color: white !important; width: 100px; height: 38px; display: inline-flex; justify-content: center; align-items: center; border-radius: 20px;"
+                            class="btn btn-warning">
+                            Editar
+                        </a>
+
+                        <form action="{{ route('clientes.destroy', $cliente->id) }}" method="post" style="display: inline-block;">
                             @csrf
                             @method('DELETE')
                             <button type="button"
                                 data-id="{{ $cliente->id }}"
                                 onclick="confirmarEliminacion(this)"
-                                style="font-weight: bold; background-color: #ff4351; color: white !important;" 
-                                class="button button-rounded button-pill button-small">
+                                style="font-weight: bold; background-color: #ff4351; color: white !important; width: 100px; height: 38px; display: inline-flex; justify-content: center; align-items: center; border-radius: 20px;"
+                                class="btn btn-danger">
                                 Eliminar
                             </button>
 
                         </form>
 
-                        <a href="{{ route('clientes.edit', $cliente->id) }}"
-                            style="font-weight: bold; background-color: #f0ad4e; color: white !important;" 
-                            class="button button-rounded button-pill button-small">
-                            Editar
-                        </a>
                     </td>
                     @endcanany
                 </tr>
